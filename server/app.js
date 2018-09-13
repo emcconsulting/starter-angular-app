@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
 
-
+app.use((req,res,next)=>{
+ res.setHeader('Access-Control-Allow-Origin','*');
+ res.setHeader('Access-Control-Allow-Header','Origin,X-Requested-With,Content-Type, Accept');
+  next();
+});
 
 app.use('/api/posts',(req, res, next)=>{
 //  response.send('Hello from express!!!');
