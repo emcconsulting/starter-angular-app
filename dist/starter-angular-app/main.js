@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "main{\n  width: 80%;\n  margin: 1rem auto;\n}\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Our First App </h1>\n<app-post-create></app-post-create>\n"
+module.exports = "<app-header></app-header>\n<main>\n  <app-post-create></app-post-create>\n  <app-post-list></app-post-list>\n</main>\n"
 
 /***/ }),
 
@@ -95,10 +95,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _posts_post_create_post_create_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./posts/post-create/post-create.component */ "./src/app/posts/post-create/post-create.component.ts");
-/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./header/header.component */ "./src/app/header/header.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _posts_post_create_post_create_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./posts/post-create/post-create.component */ "./src/app/posts/post-create/post-create.component.ts");
+/* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./header/header.component */ "./src/app/header/header.component.ts");
+/* harmony import */ var _posts_post_list_post_list_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./posts/post-list/post-list.component */ "./src/app/posts/post-list/post-list.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -113,28 +115,32 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _posts_post_create_post_create_component__WEBPACK_IMPORTED_MODULE_6__["PostCreateComponent"],
-                _header_header_component__WEBPACK_IMPORTED_MODULE_7__["HeaderComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _posts_post_create_post_create_component__WEBPACK_IMPORTED_MODULE_7__["PostCreateComponent"],
+                _posts_post_list_post_list_component__WEBPACK_IMPORTED_MODULE_9__["PostListComponent"],
+                _header_header_component__WEBPACK_IMPORTED_MODULE_8__["HeaderComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatInputModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatCardModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatButtonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatExpansionModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatToolbarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatExpansionModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -268,6 +274,89 @@ var PostCreateComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/posts/post-list/post-list.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/posts/post-list/post-list.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host{\n  display: block;\n  margin-top: 1rem;\n}\n\n.info-text{\n  text-align: center;\n}\n"
+
+/***/ }),
+
+/***/ "./src/app/posts/post-list/post-list.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/posts/post-list/post-list.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-accordion multi=\"true\" *ngIf=\"posts.length > 0\">\n <mat-expansion-panel *ngFor = \"let post of posts\">\n  <mat-expansion-panel-header>\n    {{post.title}}\n  </mat-expansion-panel-header>\n  <p>\n    {{post.content}}\n  </p>\n  <mat-action-row>\n   <button\n    mat-button color=\"primary\"> EDIT\n   </button>\n   <button\n    mat-button color=\"warn\"> DELETE\n   </button>\n  </mat-action-row>\n </mat-expansion-panel>\n</mat-accordion>\n<p class=\"info-text mat-body-1\" *ngIf=\"posts.length <= 0\"> No posts added yet!</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/posts/post-list/post-list.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/posts/post-list/post-list.component.ts ***!
+  \********************************************************/
+/*! exports provided: PostListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostListComponent", function() { return PostListComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _posts_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../posts.service */ "./src/app/posts/posts.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var PostListComponent = /** @class */ (function () {
+    function PostListComponent(postsService) {
+        this.postsService = postsService;
+        /*
+      posts=[
+      {title: "First Post", content: "This is the first posts's content"},
+      {title: "Second Post", content: "This is the second posts's content"},
+      {title: "Third Post", content: "This is the third posts's content"}
+      ]
+        */
+        this.posts = [];
+    }
+    PostListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.postsService.getPosts();
+        this.postsSub = this.postsService.getPostUpdateListener()
+            .subscribe(function (posts) {
+            _this.posts = posts;
+        });
+    };
+    PostListComponent.prototype.ngOnDestroy = function () {
+        this.postsSub.unsubscribe();
+    };
+    PostListComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-post-list',
+            template: __webpack_require__(/*! ./post-list.component.html */ "./src/app/posts/post-list/post-list.component.html"),
+            styles: [__webpack_require__(/*! ./post-list.component.css */ "./src/app/posts/post-list/post-list.component.css")]
+        }),
+        __metadata("design:paramtypes", [_posts_service__WEBPACK_IMPORTED_MODULE_1__["PostsService"]])
+    ], PostListComponent);
+    return PostListComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/posts/posts.service.ts":
 /*!****************************************!*\
   !*** ./src/app/posts/posts.service.ts ***!
@@ -280,32 +369,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostsService", function() { return PostsService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 
 var PostsService = /** @class */ (function () {
-    function PostsService() {
+    function PostsService(httpClient) {
+        this.httpClient = httpClient;
         this.posts = [];
         this.postsUpdated = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
     }
     PostsService.prototype.getPosts = function () {
-        return this.posts.slice();
+        var _this = this;
+        this.httpClient.get('http://localhost:3000/api/posts')
+            .subscribe(function (postData) {
+            _this.posts = postData.posts;
+            _this.postsUpdated.next(_this.posts.slice());
+        });
+        //  return [...this.posts];
     };
     PostsService.prototype.getPostUpdateListener = function () {
         return this.postsUpdated.asObservable();
     };
     PostsService.prototype.addPost = function (title, content) {
-        var post = { title: title, content: content };
+        var post = { id: null, title: title, content: content };
         this.posts.push(post);
         this.postsUpdated.next(this.posts.slice());
     };
     PostsService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({ providedIn: 'root' })
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({ providedIn: 'root' }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], PostsService);
     return PostsService;
 }());

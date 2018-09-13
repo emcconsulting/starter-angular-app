@@ -1,5 +1,6 @@
 const http = require('http');
 const app = require('./server/app');
+const debug = require('debug')('node-angular');
 /*const server = http.createServer((req,res)=>{
   res.end('This is my first response!!!');
 });
@@ -27,7 +28,7 @@ const onError = error =>{
   if(error.syscall !== "listen"){
     throw error;
   }
-  const bind = typeof addr === "string" ? "pipe " + addr : "port " port;
+  const bind = typeof addr === "string" ? "pipe " + addr : "port " + port;
 
   switch (error.code) {
     case "EACCES":
@@ -47,8 +48,8 @@ const onError = error =>{
 
 const onListening = () => {
   const addr = server.address();
-  const bind = typeof addr === "string" ? "pipe "+addr : "port " + port;
-  debug("Listening on "+ bind);
+  const bind = typeof addr === "string" ? "pipe "+ addr : "port " + port;
+  debug("Listening on " + bind);
 };
 
 const port = normalizePort(process.env.PORT || "3000");
